@@ -4,11 +4,13 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
 public class Main extends Application {
+
 
     private static Stage stg;
 
@@ -17,8 +19,13 @@ public class Main extends Application {
         stg = primaryStage;
         primaryStage.setResizable(false);
         Parent root = FXMLLoader.load(getClass().getResource("login.fxml"));
-        primaryStage.setTitle("Login");
+        primaryStage.setTitle("BHT Quiz");
         primaryStage.setScene(new Scene(root, 600, 400));
+
+        Scene scene = primaryStage.getScene();
+        scene.setOnKeyPressed((KeyEvent event) -> {
+            System.out.println(event.getCode());
+        });
         primaryStage.show();
     }
 
@@ -30,5 +37,4 @@ public class Main extends Application {
     public static void main(String[] args) {
         launch(args);
     }
-
 }

@@ -5,10 +5,11 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
-import javafx.scene.control.PasswordField;
+
+//import org.apache.logging.log4j.Logger;
+//import org.apache.logging.log4j.LogManager;
 
 import java.io.IOException;
-
 
 public class Login {
 
@@ -18,11 +19,11 @@ public class Login {
     @FXML
     private Label feedbackLabel;
     @FXML
-    private Button login;
+    private Button start;
     @FXML
-    private TextField username;
+    private TextField name1;
     @FXML
-    private PasswordField password;
+    private TextField name2;
 
     public void userLogin(ActionEvent event)throws IOException {
         checkLogin();
@@ -30,15 +31,18 @@ public class Login {
 
     private void checkLogin() throws IOException {
         Main m = new Main();
-        if((username.getText().toString().equals("JavaRocks")) && (password.getText().toString().equals("123"))) {
-            feedbackLabel.setText("Success!");
-            m.changeScene("afterLogin.fxml");
-        } else if (username.getText().isEmpty() && password.getText().isEmpty()) {
-            feedbackLabel.setText("Enter your login data.");
-        }
-        else {
-            feedbackLabel.setText("Wrong user or password!");
-        }
-    }
 
+        if (name1.getText().toString().isEmpty() && name2.getText().toString().isEmpty()) {
+            feedbackLabel.setText("Enter two names to start.");}
+
+        else if (name1.getText().equals(name2.getText())) {
+            feedbackLabel.setText("Enter two different names!");}
+
+        else if((!name1.getText().toString().isEmpty()) && (!name2.getText().toString().isEmpty())) {
+            feedbackLabel.setText("Success!");
+            m.changeScene("landingPage.fxml");}
+
+        else {
+            feedbackLabel.setText("Enter two names to start.");}
+    }
 }
