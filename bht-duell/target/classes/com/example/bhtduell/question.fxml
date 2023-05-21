@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #ffedd1;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bhtduell.QuestionController">
+    <center>
+        <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ffffff;" BorderPane.alignment="CENTER">
+            <children>
+                <Label layoutX="58.0" layoutY="51.0" text="Can you answer this question?" textFill="#40382f">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="question_field" alignment="CENTER" editable="false" layoutX="58.0" layoutY="133.0" prefHeight="28.0" prefWidth="483.0" style="-fx-background-color: #ffcbb3;">
+                    <font>
+                        <Font name="SansSerif Bold" size="12.0" />
+                    </font>
+                </TextField>
+                <ProgressBar layoutX="313.0" layoutY="50.0" prefHeight="20.0" prefWidth="227.0" progress="0.82" style="--fx-accent: #40382f;" />
+                <TextField fx:id="answer_A" alignment="CENTER" editable="false" layoutX="58.0" layoutY="186.0" onMouseClicked="#AClicked" prefHeight="28.0" prefWidth="483.0" style="-fx-background-color: #ffefd6;">
+                    <font>
+                        <Font name="SansSerif Bold" size="12.0" />
+                    </font>
+                </TextField>
+                <TextField fx:id="answer_B" alignment="CENTER" editable="false" layoutX="58.0" layoutY="219.0" onMouseClicked="#BClicked" prefHeight="28.0" prefWidth="483.0" style="-fx-background-color: #ffefd6;">
+                    <font>
+                        <Font name="SansSerif Bold" size="12.0" />
+                    </font>
+                </TextField>
+                <TextField fx:id="answer_C" alignment="CENTER" editable="false" layoutX="58.0" layoutY="254.0" onMouseClicked="#CClicked" prefHeight="28.0" prefWidth="483.0" style="-fx-background-color: #ffefd6;">
+                    <font>
+                        <Font name="SansSerif Bold" size="12.0" />
+                    </font>
+                </TextField>
+                <TextField fx:id="answer_D" alignment="CENTER" editable="false" layoutX="58.0" layoutY="289.0" onMouseClicked="#DClicked" prefHeight="28.0" prefWidth="483.0" style="-fx-background-color: #ffefd6;">
+                    <font>
+                        <Font name="SansSerif Bold" size="12.0" />
+                    </font>
+                </TextField>
+                <Label layoutX="58.0" layoutY="68.0" text="Hurry up, time is running..." textFill="#40382f">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+                <Button fx:id="load" layoutX="421.0" layoutY="338.0" mnemonicParsing="false" onAction="#loadQuestionAnswer" prefHeight="25.0" prefWidth="119.0" style="-fx-background-color: #ffb3a3;" text="LOAD QUESTION" textFill="#1b1b1bd4">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Button>
+            </children>
+        </AnchorPane>
+    </center>
+</BorderPane>

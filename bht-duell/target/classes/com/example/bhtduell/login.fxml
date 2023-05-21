@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bhtduell.Controller">
+    <left>
+        <AnchorPane prefHeight="200.0" prefWidth="170.0" BorderPane.alignment="CENTER">
+            <children>
+                <!--<ImageView fx:id="login_image_1" fitHeight="216.0" fitWidth="218.0" layoutY="-14.0" pickOnBounds="true" preserveRatio="true">
+                   <image>
+                      <Image url="@/img/logo_draft.png" />
+                   </image>
+                </ImageView>-->
+                <!--<ImageView fx:id="login_image_2" fitHeight="150.0" fitWidth="200.0" layoutX="34.0" layoutY="236.0" pickOnBounds="true" preserveRatio="true">
+                   <image>
+                      <Image url="@/img/questionmark.png" />
+                   </image>
+                </ImageView>-->
+            </children>
+        </AnchorPane>
+    </left>
+    <right>
+        <AnchorPane prefHeight="200.0" prefWidth="378.0" BorderPane.alignment="CENTER">
+            <children>
+                <TextField fx:id="username_1" layoutX="78.0" layoutY="153.0" prefHeight="30.0" prefWidth="167.0" promptText="Name Player 1" />
+                <Label layoutX="82.0" layoutY="118.0" text="Please enter the player's names:">
+                    <font>
+                        <Font name="Berlin Sans FB" size="12.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="username_2" layoutX="78.0" layoutY="219.0" prefHeight="30.0" prefWidth="167.0" promptText="Name Player 2" />
+                <Button fx:id="continue_button" layoutX="124.0" layoutY="293.0" mnemonicParsing="false" onAction="#handle" prefHeight="29.0" prefWidth="75.0" style="-fx-background-color: #FFFFF;" text="Continue" textFill="#d59669">
+                    <font>
+                        <Font name="Berlin Sans FB Demi Bold" size="13.0" />
+                    </font></Button>
+                <Label layoutX="57.0" layoutY="31.0" prefHeight="72.0" prefWidth="283.0" text="Quizzduel" textFill="#ff8f27">
+                    <font>
+                        <Font name="Berlin Sans FB" size="48.0" />
+                    </font>
+                </Label>
+            <Label fx:id="player1_error" layoutX="82.0" layoutY="191.0" prefHeight="17.0" prefWidth="163.0" textFill="#f22b2b" />
+            <Label fx:id="player2_error" layoutX="82.0" layoutY="257.0" prefHeight="17.0" prefWidth="163.0" textFill="#f22b2b" />
+            <Label fx:id="successful_login" layoutX="78.0" layoutY="348.0" prefHeight="17.0" prefWidth="170.0" textFill="#17d31a" />
+            </children>
+        </AnchorPane>
+    </right>
+</BorderPane>
