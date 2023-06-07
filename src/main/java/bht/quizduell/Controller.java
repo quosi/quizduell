@@ -1,4 +1,4 @@
-package com.example.bhtduell;
+package bht.quizduell;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;

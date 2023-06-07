@@ -1,4 +1,4 @@
-package com.example.bhtduell;
+package bht.quizduell;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -18,6 +18,6 @@ public class DuellApplication extends Application {
     }
 
     public static void main(String[] args) {
-        launch();
+        launch(args);
     }
 }
